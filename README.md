@@ -119,10 +119,13 @@ Decimal: 53
 Binary: 000....0110101
 
 Decimal: -53
-Binary: 111....1001010
+Binary: 111....1001011 (last bit plus 1)
 ```
-
-补充一下：补码的概念
 
 - `>>` signed right shift: all integers are signed in Java. 
 - `>>>` unsigned right shift: always fills 0 irrespective of the sign of the number. 
+
+<b>Logical shift</b>: does not preserve a number's sign bit, fill the vacant bit-positions by 0s. Use `>>>` to do logical shift. 
+
+<b>Arithmetic shift</b>: when shifting to the right, the leftmost (usually the sign bit in the signed integer representations) bit is replicated to fill in all the vacant positions. 
+
